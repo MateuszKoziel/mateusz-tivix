@@ -5,8 +5,8 @@ Feature: Car Rental in Tivix
   Scenario Outline: Successful rental of a car (happy path)
     Given user is on the Search page to rent a car
     When user selects a "<country>" in the country dropdown
-    And user selects a "<city>" in the city dropdown
-    And user types a "<model>" in the textfield
+    And user selects "<city>" in the city dropdown
+    And user types "<model>" as a car model
     And user selects pick-up date as "2021-08-01"
     And user selects drop-off date as "2021-08-07"
     And user clicks Search button
@@ -29,8 +29,8 @@ Feature: Car Rental in Tivix
   Scenario Outline: User rents a car with invalid dates
     Given user is on the Search page to rent a car
     When user selects a "<country>" in the country dropdown
-    And user selects a "<city>" in the city dropdown
-    And user types a "<model>" in the textfield
+    And user selects "<city>" in the city dropdown
+    And user types "<model>" as a car model
     And user selects pick-up date as "2021-06-06"
     And user selects drop-off date as "2021-06-01"
     And user clicks Search button
@@ -43,8 +43,8 @@ Feature: Car Rental in Tivix
   Scenario Outline: User rents a car providing incorrect personal data
     Given user is on the Search page to rent a car
     When user selects a "<country>" in the country dropdown
-    And user selects a "<city>" in the city dropdown
-    And user types a "<model>" in the textfield
+    And user selects "<city>" in the city dropdown
+    And user types "<model>" as a car model
     And user selects pick-up date as "2021-08-01"
     And user selects drop-off date as "2021-08-07"
     And user clicks Search button

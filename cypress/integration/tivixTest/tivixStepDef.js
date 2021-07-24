@@ -8,12 +8,12 @@ When("user selects a {string} in the country dropdown",(country) => {
     .select(country)
     .should('contain', country);
 })
-And("user selects a {string} in the city dropdown",(city) => {
+And("user selects {string} in the city dropdown",(city) => {
   cy.get('#city')
     .select(city)
     .should('contain', city);
 })
-And("user types a {string} in the textfield",(model) => {
+And("user types {string} as a car model",(model) => {
   cy.get('#model')
     .type(model)
     .should('have.value', model);
