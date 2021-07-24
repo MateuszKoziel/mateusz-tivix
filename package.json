@@ -1,0 +1,21 @@
+{
+  "name": "tivix_mkoziel",
+  "version": "1.0.0",
+  "description": "Tivix excercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Koziel",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.0.0",
+    "cypress-cucumber-preprocessor": "^4.1.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "cosmiconfig": "^7.0.0"
+  }
+}
