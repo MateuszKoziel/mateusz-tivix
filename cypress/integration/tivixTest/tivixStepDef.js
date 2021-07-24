@@ -49,6 +49,12 @@ And("user fills an Email with {string}", (email) => {
 And("user clicks Rent button", () => {
   cy.get('.btn-primary').contains('Rent').click();
 })
+Then("information about invalid date is displayed", () => {
+  cy.contains("Please enter a valid date!");
+})
+Then("information about card number value being too long is displayed", () => {
+  cy.contains("Card number value is too long");
+})
 //this one is obviously not working
 // Then("user successfully rented a car", () => {
 //   some validations here
