@@ -3,32 +3,32 @@ import { Given,When,Then, And } from "cypress-cucumber-preprocessor/steps";
 Given("user is on the Search page to rent a car", () => {
   cy.visit("http://qalab.pl.tivixlabs.com/")
 })
-When("user selects a {string} in the country dropdown",(country)=> {
+When("user selects a {string} in the country dropdown",(country) => {
   cy.get('#country')
     .select(country)
     .should('contain', country);
 })
-And("user selects a {string} in the city dropdown",(city)=> {
+And("user selects a {string} in the city dropdown",(city) => {
   cy.get('#city')
     .select(city)
     .should('contain', city);
 })
-And("user types a {string} in the textfield",(model)=> {
+And("user types a {string} in the textfield",(model) => {
   cy.get('#model')
     .type(model)
     .should('have.value', model);
 })
-And("user selects pick-up date as {string}",(pickUpDate)=> {
+And("user selects pick-up date as {string}",(pickUpDate) => {
   cy.get('#pickup')
     .type(pickUpDate)
     .should('have.value', pickUpDate);
 })
-And("user selects drop-off date as {string}",(dropOffDate)=> {
+And("user selects drop-off date as {string}",(dropOffDate) => {
   cy.get('#dropoff')
     .type(dropOffDate)
     .should('have.value', dropOffDate);
 })
-And("user clicks Search button",()=> {
+And("user clicks Search button",() => {
   cy.get('.btn-primary')
     .contains('Search').click();
 })
